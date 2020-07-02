@@ -1,11 +1,12 @@
-import React from "react";
-
+import React, { useState, Fragment } from "react";
+import { Form, Button, Alert } from "react-bootstrap";
 import { useFormik } from "formik";
 import InputGroup from "../../components/InputGroup/InputGroup";
 
 const FormController = () => {
+	const [valid, setValid] = useState(false);
 	const validate = (values) => {
-		let errors = {};
+		const errors = {};
 		if (!values.lastName) {
 			errors.lastName = "Required";
 		}
@@ -19,6 +20,7 @@ const FormController = () => {
 		} else if (!/^[A-Za-z]\w{7,14}$/.test(values.password)) {
 			errors.password = "Invalid password";
 		}
+		return errors;
 	};
 	const formik = useFormik({
 		initialValues: {
@@ -27,19 +29,31 @@ const FormController = () => {
 			email: "",
 			password: "",
 		},
-		onSubmit: (values) => {
-			alert(JSON.stringify(values));
-		},
 		validate,
+		onSubmit: () => {
+			setValid(true);
+			setTimeout(() => {
+				setValid(false);
+			}, 2000);
+		},
 	});
 	return (
-		<form onSubmit={formik.handleSubmit}>
-			<InputGroup type="text" handleChange={formik.handleChange} value={formik.values.firstName} name="firstName" label="First Name" />
-			<InputGroup type="text" handleChange={formik.handleChange} value={formik.values.lastName} name="lastName" label="Last Name" />
-			<InputGroup type="email" handleChange={formik.handleChange} value={formik.values.email} name="email" label="Email" />
-			<InputGroup type="password" handleChange={formik.handleChange} value={formik.values.password} name="password" label="Password" />
-			<button type="submit">submit</button>
-		</form>
+		<Fragment>
+			<Form onSubmit={formik.handleSubmit}>
+				<InputGroup type="text" formik={formik} name="firstName" label="First Name" />
+				<InputGroup type="text" formik={formik} name="lastName" label="Last Name" />
+				<InputGroup type="email" formik={formik} name="email" label="Email" />
+				<InputGroup type="password" formik={formik} name="password" label="Password" />
+				<Button variant="primary" type="submit">
+					Submit
+				</Button>
+			</Form>
+			{valid && (
+				<Alert className="mt-3" variant="success">
+					Validation successful
+				</Alert>
+			)}
+		</Fragment>
 	);
 };
 

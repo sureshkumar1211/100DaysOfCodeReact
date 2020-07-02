@@ -1,10 +1,13 @@
 import React from "react";
-const InputGroup = ({ name, label, type, value, handleChange }) => {
+import { Form } from "react-bootstrap";
+const InputGroup = ({ name, formik, label, type }) => {
+	let { errors, touched, handleChange, handleBlur, values } = formik;
 	return (
-		<div>
-			<label htmlFor={name}>{label}</label>
-			<input type={type} onChange={handleChange} value={value} name={name} id={name} />
-		</div>
+		<Form.Group controlId={name}>
+			<Form.Label>{label}</Form.Label>
+			<Form.Control type={type} onChange={handleChange} onBlur={handleBlur} value={values[name]} name={name} />
+			{errors[name] && touched[name] ? <Form.Text className="text-danger">{errors[name]}</Form.Text> : null}
+		</Form.Group>
 	);
 };
 
