@@ -10,7 +10,7 @@ export default class SearchFilter extends Component {
 	state = {
 		itemsToDisplay: [],
 		selectedCuisine: "",
-		sortBy: 1,
+		sortBy: 0,
 		cuisines: [],
 	};
 
@@ -18,11 +18,32 @@ export default class SearchFilter extends Component {
 		this.setState({ cuisines: cuisineData });
 	}
 
+	cuisineOnChangeHandler = (e) => {
+		console.log(e.target.value);
+	};
+
+	sortOnChangeHandler = (e) => {
+		let value = e.target.value;
+		switch (value) {
+			case 1: {
+			}
+			case 2: {
+			}
+			default:
+				return this.state.cousines;
+		}
+	};
+
 	render() {
-		let { cuisines } = this.state;
+		let { cuisines, sortBy, selectedCuisine } = this.state;
 		return (
 			<div className="container">
-				<Sidebar />
+				<Sidebar
+					cuisineHandler={this.cuisineOnChangeHandler}
+					sortSelected={sortBy}
+					cuisineSelected={selectedCuisine}
+					sortHandler={this.sortOnChangeHandler}
+				/>
 				<CardList cuisines={cuisines} />
 			</div>
 		);
