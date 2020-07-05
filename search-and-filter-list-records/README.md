@@ -66,3 +66,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Read article how to Filtering, Sorting and Pagination – Advanced Filtering with React and Redux
+URL : https://blog.soshace.com/filtering-sorting-and-pagination-advanced-filtering-with-react-and-redux/
