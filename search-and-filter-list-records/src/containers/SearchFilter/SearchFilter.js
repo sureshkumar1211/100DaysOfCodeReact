@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import cuisineData from "../../data.json";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import CardList from "../../components/CardList/CardList";
+import { sortAsc, sortDes } from "../../hof/sort";
 
 export default class SearchFilter extends Component {
 	state = {
@@ -24,13 +25,18 @@ export default class SearchFilter extends Component {
 
 	sortOnChangeHandler = (e) => {
 		let value = e.target.value;
+
 		switch (value) {
-			case 1: {
+			case "1": {
+				let cuisines = sortAsc(this.state.cuisines, "Rating");
+				return this.setState({ cuisines, sortBy: value });
 			}
-			case 2: {
+			case "2": {
+				let cuisines = sortDes(this.state.cuisines, "Rating");
+				return this.setState({ cuisines, sortBy: value });
 			}
 			default:
-				return this.state.cousines;
+				return this.setState({ sortBy: value, cuisines: cuisineData });
 		}
 	};
 

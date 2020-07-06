@@ -12,7 +12,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Dutch', 'European', 'Vegetarian Friendly', 'Gluten Free Options']",
 		"Ranking": 2,
-		"Rating": 4.5,
+		"Rating": 1.5,
 		"Number of Reviews": 812
 	},
 	{
@@ -20,7 +20,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Mediterranean', 'French', 'International', 'European', 'Vegetarian Friendly', 'Vegan Options']",
 		"Ranking": 3,
-		"Rating": 4.5,
+		"Rating": 2.5,
 		"Number of Reviews": 567
 	},
 	{
@@ -28,7 +28,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['French', 'European', 'International', 'Contemporary', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 4,
-		"Rating": 5,
+		"Rating": 1,
 		"Number of Reviews": 564
 	},
 	{
@@ -36,7 +36,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Dutch', 'European', 'International', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 5,
-		"Rating": 4.5,
+		"Rating": 1.5,
 		"Number of Reviews": 316
 	},
 	{
@@ -44,7 +44,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Contemporary', 'International', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 6,
-		"Rating": 4.5,
+		"Rating": 2.5,
 		"Number of Reviews": 745
 	},
 	{
@@ -52,7 +52,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['French', 'International', 'Mediterranean', 'European', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 7,
-		"Rating": 4.5,
+		"Rating": 3,
 		"Number of Reviews": 1455
 	},
 	{
@@ -60,7 +60,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Asian', 'Indonesian', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 8,
-		"Rating": 4.5,
+		"Rating": 2,
 		"Number of Reviews": 675
 	},
 	{
@@ -68,7 +68,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Japanese', 'Asian', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 9,
-		"Rating": 4.5,
+		"Rating": 2,
 		"Number of Reviews": 923
 	},
 	{
@@ -76,7 +76,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['Dutch', 'Seafood', 'Fast Food']",
 		"Ranking": 10,
-		"Rating": 4.5,
+		"Rating": 3,
 		"Number of Reviews": 450
 	},
 	{
@@ -84,7 +84,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['American', 'Bar', 'European', 'Vegetarian Friendly', 'Gluten Free Options']",
 		"Ranking": 11,
-		"Rating": 4.5,
+		"Rating": 5,
 		"Number of Reviews": 295
 	},
 	{
@@ -92,7 +92,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['French', 'Dutch', 'International', 'European', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 12,
-		"Rating": 4.5,
+		"Rating": 3.5,
 		"Number of Reviews": 967
 	},
 	{
@@ -100,7 +100,7 @@
 		"City": "Amsterdam",
 		"Cuisine Style": "['French', 'European', 'Central European', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 13,
-		"Rating": 4.5,
+		"Rating": 1.5,
 		"Number of Reviews": 368
 	},
 	{
