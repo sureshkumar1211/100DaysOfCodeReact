@@ -20,7 +20,13 @@ export default class SearchFilter extends Component {
 	}
 
 	cuisineOnChangeHandler = (e) => {
-		console.log(e.target.value);
+		let term = e.target.value;
+		if (term === "any") {
+			return this.setState({ cuisines: [...cuisineData], selectedCuisine: term });
+		}
+		let cuisines = [...cuisineData];
+		let filterCuisines = cuisines.filter((cuisine) => cuisine.Name.includes(term) || cuisine.City.includes(term));
+		this.setState({ cuisines: filterCuisines, selectedCuisine: term });
 	};
 
 	sortOnChangeHandler = (e) => {

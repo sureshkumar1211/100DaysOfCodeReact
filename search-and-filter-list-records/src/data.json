@@ -81,7 +81,7 @@
 	},
 	{
 		"Name": "The Happy Bull",
-		"City": "Amsterdam",
+		"City": "American",
 		"Cuisine Style": "['American', 'Bar', 'European', 'Vegetarian Friendly', 'Gluten Free Options']",
 		"Ranking": 11,
 		"Rating": 5,
@@ -89,7 +89,7 @@
 	},
 	{
 		"Name": "Gartine",
-		"City": "Amsterdam",
+		"City": "European",
 		"Cuisine Style": "['French', 'Dutch', 'International', 'European', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 12,
 		"Rating": 3.5,
@@ -97,7 +97,7 @@
 	},
 	{
 		"Name": "Restaurant Adam",
-		"City": "Amsterdam",
+		"City": "French",
 		"Cuisine Style": "['French', 'European', 'Central European', 'Vegetarian Friendly', 'Vegan Options', 'Gluten Free Options']",
 		"Ranking": 13,
 		"Rating": 1.5,
@@ -105,7 +105,7 @@
 	},
 	{
 		"Name": "Biercafe Gollem",
-		"City": "Amsterdam",
+		"City": "Bar",
 		"Cuisine Style": "['Bar', 'Pub']",
 		"Ranking": 14,
 		"Rating": 4.5,
