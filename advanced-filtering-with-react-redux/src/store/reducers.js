@@ -38,7 +38,7 @@ const reducers = (state = initialState, action) => {
 			return state;
 		}
 		case LOAD_DATA: {
-			return state;
+			return { ...state, users: action.payload };
 		}
 		default:
 			return state;
