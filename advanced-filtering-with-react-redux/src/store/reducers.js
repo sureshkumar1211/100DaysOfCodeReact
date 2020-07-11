@@ -1,4 +1,5 @@
 import { SORT_BY_ALPHABET, SORT_BY_ID, LOAD_DATA } from "./actions";
+import { sortByAlphabet } from "../hof/sort";
 
 const initialState = {
 	users: [
@@ -26,16 +27,19 @@ const initialState = {
 			},
 		},
 	],
-	sortBy: 0,
+	sortBy: -1,
 };
 
 const reducers = (state = initialState, action) => {
 	switch (action.type) {
 		case SORT_BY_ALPHABET: {
-			return state;
+			let users = [...state.users];
+			let sortedUsers = sortByAlphabet(users, "name");
+			return { ...state, users: sortedUsers, sortBy: 0 };
 		}
 		case SORT_BY_ID: {
-			return state;
+			console.log(action);
+			return { ...state, sortBy: 1 };
 		}
 		case LOAD_DATA: {
 			return { ...state, users: action.payload };

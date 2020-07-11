@@ -2,14 +2,12 @@ export const SORT_BY_ALPHABET = "SORT_BY_ALPHABET";
 export const SORT_BY_ID = "SORT_BY_ID";
 export const LOAD_DATA = "LOAD_DATA";
 
-export const sortByAlphabet = (payload) => ({
+export const sortByAlphabet = () => ({
 	type: SORT_BY_ALPHABET,
-	payload,
 });
 
-export const sortByPrice = (payload) => ({
+export const sortByPrice = () => ({
 	type: SORT_BY_ID,
-	payload,
 });
 
 export const loadData = (payload) => ({
