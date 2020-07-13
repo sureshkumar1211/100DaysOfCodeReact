@@ -66,3 +66,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+// Learnt working with ref both class and functional components via this blog
+https://medium.com/@mrewusi/a-gentle-introduction-to-refs-in-react-f407101a5ea6

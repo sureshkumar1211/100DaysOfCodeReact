@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { sortByAlphabet, sortByPrice } from "../../store/actions";
 const SelectInput = ({ state: { sortBy }, selected }) => {
+	let selectRef = useRef(null);
 	useEffect(() => {
 		selected(sortByAlphabet);
+		selectRef.current.focus();
 	}, []);
 
 	let onChangeHandler = (e) => {
@@ -16,7 +18,7 @@ const SelectInput = ({ state: { sortBy }, selected }) => {
 
 	return (
 		<div className="select pl-2">
-			<select value={sortBy} onChange={onChangeHandler}>
+			<select ref={selectRef} value={sortBy} onChange={onChangeHandler}>
 				<option value="-1" disabled>
 					Sort by
 				</option>
