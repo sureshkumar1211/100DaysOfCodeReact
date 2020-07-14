@@ -5,7 +5,7 @@ import axios from "axios";
 
 //IMPORT PROJECT MODULES
 import Hero from "../../components/Hero/Hero";
-import SelectInput from "../../components/SelectInput/SelectInput";
+import SelectInput from "../../components/SelectInput/SelectInput.tsx";
 import CardList from "../../components/CardList/CardList";
 import { loadData } from "../../store/actions";
 

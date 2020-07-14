@@ -1,14 +1,26 @@
 import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { sortByAlphabet, sortByPrice } from "../../store/actions";
-const SelectInput = ({ state: { sortBy }, selected }) => {
-	let selectRef = useRef(null);
+
+interface Props {
+	state: {
+		sortBy: number;
+	};
+	selected: any;
+}
+
+type OnChangeHandler = (e: any) => void;
+
+const SelectInput = ({ state: { sortBy }, selected }: Props) => {
+	let selectRef: any = useRef<HTMLInputElement>(null);
 	useEffect(() => {
 		selected(sortByAlphabet);
-		selectRef.current.focus();
+		if (selectRef && selectRef.current) {
+			selectRef.current.focus();
+		}
 	}, []);
 
-	let onChangeHandler = (e) => {
+	let onChangeHandler: OnChangeHandler = (e) => {
 		let { value } = e.target;
 		if (value === "0") {
 			return selected(sortByAlphabet);
@@ -29,9 +41,9 @@ const SelectInput = ({ state: { sortBy }, selected }) => {
 	);
 };
 
-const mapStateToProps = (state) => ({ state });
-const mapDispatchToProps = (dispatch) => ({
-	selected: (callback) => dispatch(callback()),
+const mapStateToProps = (state: object): object => ({ state });
+const mapDispatchToProps = (dispatch: any): object => ({
+	selected: (callback: any) => dispatch(callback()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SelectInput);

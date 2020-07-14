@@ -1,7 +1,12 @@
 import { SORT_BY_ALPHABET, SORT_BY_ID, LOAD_DATA } from "./actions";
 import { sortByAlphabet } from "../hof/sort";
 
-const initialState = {
+interface InitialState {
+	users: any;
+	sortBy: number;
+}
+
+const initialState: InitialState = {
 	users: [
 		{
 			id: 1,
@@ -30,7 +35,9 @@ const initialState = {
 	sortBy: -1,
 };
 
-const reducers = (state = initialState, action) => {
+type Reducers = (state: InitialState, action: any) => void;
+
+const reducers: Reducers = (state = initialState, action) => {
 	switch (action.type) {
 		case SORT_BY_ALPHABET: {
 			let users = [...state.users];
