@@ -1,4 +1,7 @@
-Initially, we’d need to install the necessary packages. 
+Courtesy - https://www.smashingmagazine.com/2020/05/typescript-modern-react-projects-webpack-babel
+
+Initially, we’d need to install the necessary packages.
+
 - Open your command-line interface (CLI) and run this command npm install
 
 PROJECT STRUCTURE
@@ -11,9 +14,7 @@ our folder structure will look something like this:
 ├── webpack.config.js
 ├── .gitignore
 └── src
-    └──components
-        ├── App.tsx
-        ├── index.tsx
-        ├── index.html 
-
-        
+└──components
+├── App.tsx
+├── index.tsx
+├── index.html
